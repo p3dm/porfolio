@@ -1,3 +1,4 @@
+import { Github } from "lucide-react";
 export const navItems = [
     { name: "About", link: "#about" },
     { name: "Projects", link: "#projects" },
@@ -170,17 +171,21 @@ export const gridItems = [
     },
   ];
   
+  
   export const socialMedia = [
-    {
-      id: 1,
-      img: "/git.svg",
-    },
-    {
-      id: 2,
-      img: "/twit.svg",
-    },
-    {
-      id: 3,
-      img: "/link.svg",
-    },
-  ];
+      {
+        id: 1,
+        img: "/git.jpg",
+        description: "https://github.com/p3dm",
+      },
+      {
+        id: 2,
+        img: "/twit.svg",
+        description:"0974417326"
+      },
+      {
+        id: 3,
+        img: "/link.svg",
+        description: "ducmanh2003lc2004@gmail.com",
+      },
+    ];

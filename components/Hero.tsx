@@ -1,6 +1,7 @@
 import React from 'react'
 import { TextGenerateEffect } from './ui/TextGenerateEffect'
 import MagicButon from './ui/MagicButon'
+import { Footprints } from 'lucide-react'
 
 const Hero = () => {
   return (
@@ -23,6 +24,8 @@ const Hero = () => {
                 <a href="#about" className="mt-10">
                     <MagicButon
                         title="Let's go"
+                        icon={<Footprints/>}
+                        position="right"
                     />
                 </a>
             </div>
