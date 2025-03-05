@@ -189,6 +189,6 @@ export const gridItems = [
         id: 3,
         img: "/gmail.svg",
         description:"Gmail",
-        link:"ducmanh2003lc2004@gmail.com"
+        link:"mailto:ducmanh2003lc2004@gmail.com"
       },
     ];

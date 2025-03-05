@@ -22,7 +22,7 @@ const Hero = () => {
                 <p className="text-left ">
                     What's up, I'm Pham Duc Manh
                 </p>
-                <Link href="#about" scroll={false} className="mt-10">
+                <Link href="#about" className="mt-10">
                     <MagicButon
                         title="Let's go"
                         icon={<Footprints/>}
