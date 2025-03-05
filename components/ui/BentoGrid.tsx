@@ -1,6 +1,8 @@
 import { socialMedia } from "@/data";
 import { cn } from "@/lib/utils";
 import { Github } from "lucide-react";
+import MagicButon from "./MagicButon";
+import Link from "next/link";
 
 export const BentoGrid = ({
   className,
@@ -49,8 +51,8 @@ export const BentoGridItem = ({
           className
         )}
         style={{
-          backgroundColor: "rgb(173,170,170)",
-          background:
+          background: "rgb(89,89,89)",
+          backgroundColor:
             "linear-gradient(90deg, rgba(89,89,89,1) 0%, rgba(165,165,233,1) 0%, rgba(91,91,103,1) 50%, rgba(75,75,75,1) 100%)",
         }}
       >
@@ -78,7 +80,7 @@ export const BentoGridItem = ({
           <div
             className={cn(
               titleClassName,
-              "justify-end group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10"
+              " justify-end group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10"
             )}
           >
             <div className="font-sans font-extralight text-neutral-300 stroke-2 text-sm ">
@@ -88,33 +90,29 @@ export const BentoGridItem = ({
             <div
               className={`${
                 id === 1
-                  ? "lg:text-5xl font-sans text-lg max-w-96 font-bold z-10 stroke-2"
-                  : "font-sans text-lg lg:text-2xl max-w-96 font-bold z-10 "
+                  ? "lg:text-5xl font-sans text-lg font-bold z-20 stroke-2"
+                  : "font-sans text-lg lg:text-2xl  font-bold z-20 "
               }`}
             >
               {title}
             </div>
-            {id === 2 &&(
-              <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2 -bottom-3 lg:-bottom-2">
-                <div className="flex flex-col gap-3 md:gap-3 lg:gap-8 ">
-                  {socialMedia.map((item)=> (
-                      <button className="items-center flex flex-row opacity-50 lg:opacity-100 rounded-lg bg-[#1c1c1f]">
-                        <div className="w-8 h-8 justify-center flex  basis-1/3">
-                        {item.img && <img src={item.img} alt={img} className="object-cover object-center scale-120" /> }
-                        </div>
-                        <div className="lg:py-4 lg:px-3 py-2 px-3 basis-2/3 text-xs lg:text-base flex justify-center">
-                        {item.description}
-                        </div>
-                        
-                      </button>
-                  ))}
-                </div>
+            {id === 2 && (
+              <div className="z-30 flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-3 -bottom-3 lg:bottom-6">
+              <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
+                {socialMedia.map((item) => (
+                <Link href={item?.link} key={item?.id} >
+                  <MagicButon
+                    img={item.img}
+                    description={item.description}
+                  />
+                </Link>
+                ))}
+              </div>
               </div>
             )}
 
             {id === 3 && (
-            <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-1 -bottom-3 lg:-bottom-2">
-              
+            <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-1 -bottom-1 lg:-bottom-2">
               <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
                 {["Java", "HTML", "TypeScript"].map((item, i) => (
                   <span

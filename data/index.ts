@@ -175,17 +175,20 @@ export const gridItems = [
   export const socialMedia = [
       {
         id: 1,
-        img: "/git.jpg",
-        description: "https://github.com/p3dm",
+        img: "/git2.png",
+        description: "GitHub",
+        link:"https://github.com/p3dm"
       },
       {
         id: 2,
-        img: "/twit.svg",
-        description:"0974417326"
+        img: "/phone.svg",
+        description:"0974417326",
+        link:"#"
       },
       {
         id: 3,
-        img: "/link.svg",
-        description: "ducmanh2003lc2004@gmail.com",
+        img: "/gmail.svg",
+        description:"Gmail",
+        link:"ducmanh2003lc2004@gmail.com"
       },
     ];

@@ -2,6 +2,7 @@ import React from 'react'
 import { TextGenerateEffect } from './ui/TextGenerateEffect'
 import MagicButon from './ui/MagicButon'
 import { Footprints } from 'lucide-react'
+import Link from 'next/link'
 
 const Hero = () => {
   return (
@@ -21,13 +22,13 @@ const Hero = () => {
                 <p className="text-left ">
                     What's up, I'm Pham Duc Manh
                 </p>
-                <a href="#about" className="mt-10">
+                <Link href="#about" scroll={false} className="mt-10">
                     <MagicButon
                         title="Let's go"
                         icon={<Footprints/>}
                         position="right"
                     />
-                </a>
+                </Link>
             </div>
         </div>
         <div className=" lg:col-span-3 md:col-span-6 md:row-span-3 lg:min-h-[60vh] pt-10  ">
