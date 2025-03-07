@@ -1,6 +1,5 @@
 import { socialMedia } from "@/data";
 import { cn } from "@/lib/utils";
-import { Github } from "lucide-react";
 import MagicButon from "./MagicButon";
 import Link from "next/link";
 
@@ -80,7 +79,7 @@ export const BentoGridItem = ({
           <div
             className={cn(
               titleClassName,
-              " justify-end group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10"
+              " group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10"
             )}
           >
             <div className="font-sans font-extralight text-neutral-300 stroke-2 text-sm ">
@@ -91,7 +90,7 @@ export const BentoGridItem = ({
               className={`${
                 id === 1
                   ? "lg:text-5xl font-sans text-lg font-bold z-20 stroke-2"
-                  : "font-sans text-lg lg:text-2xl  font-bold z-20 "
+                  : "font-sans text-lg max-w-96 lg:text-2xl  font-bold z-20 "
               }`}
             >
               {title}
